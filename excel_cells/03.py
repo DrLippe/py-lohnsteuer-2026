@@ -1,209 +1,37 @@
-def MRE4ABZ(z: Zustand) -> None:
-    z.ZRE4 = stellen((((((z.ZRE4J - z.FVB) - z.ALTE) - z.JLFREIB) + z.JLHINZU)), D("2"), 'ROUND_DOWN')
-    if (vergleiche(z.ZRE4, D("0")) == (-D("1"))):
-        z.ZRE4 = D("0")
-    z.ZRE4VP = z.ZRE4J
-    z.ZVBEZ = stellen((z.ZVBEZJ - z.FVB), D("2"), 'ROUND_DOWN')
-    if (vergleiche(z.ZVBEZ, D("0")) == (-D("1"))):
-        z.ZVBEZ = D("0")
+TAB1 = [D("0"), D("0.4"), D("0.384"), D("0.368"), D("0.352"), D("0.336"), D("0.32"), D("0.304"), D("0.288"), D("0.272"), D("0.256"), D("0.24"), D("0.224"), D("0.208"), D("0.192"), D("0.176"), D("0.16"), D("0.152"), D("0.144"), D("0.14"), D("0.136"), D("0.132"), D("0.128"), D("0.124"), D("0.12"), D("0.116"), D("0.112"), D("0.108"), D("0.104"), D("0.1"), D("0.096"), D("0.092"), D("0.088"), D("0.084"), D("0.08"), D("0.076"), D("0.072"), D("0.068"), D("0.064"), D("0.06"), D("0.056"), D("0.052"), D("0.048"), D("0.044"), D("0.04"), D("0.036"), D("0.032"), D("0.028"), D("0.024"), D("0.02"), D("0.016"), D("0.012"), D("0.008"), D("0.004"), D("0")]
+TAB2 = [D("0"), D("3000"), D("2880"), D("2760"), D("2640"), D("2520"), D("2400"), D("2280"), D("2160"), D("2040"), D("1920"), D("1800"), D("1680"), D("1560"), D("1440"), D("1320"), D("1200"), D("1140"), D("1080"), D("1050"), D("1020"), D("990"), D("960"), D("930"), D("900"), D("870"), D("840"), D("810"), D("780"), D("750"), D("720"), D("690"), D("660"), D("630"), D("600"), D("570"), D("540"), D("510"), D("480"), D("450"), D("420"), D("390"), D("360"), D("330"), D("300"), D("270"), D("240"), D("210"), D("180"), D("150"), D("120"), D("90"), D("60"), D("30"), D("0")]
+TAB3 = [D("0"), D("900"), D("864"), D("828"), D("792"), D("756"), D("720"), D("684"), D("648"), D("612"), D("576"), D("540"), D("504"), D("468"), D("432"), D("396"), D("360"), D("342"), D("324"), D("315"), D("306"), D("297"), D("288"), D("279"), D("270"), D("261"), D("252"), D("243"), D("234"), D("225"), D("216"), D("207"), D("198"), D("189"), D("180"), D("171"), D("162"), D("153"), D("144"), D("135"), D("126"), D("117"), D("108"), D("99"), D("90"), D("81"), D("72"), D("63"), D("54"), D("45"), D("36"), D("27"), D("18"), D("9"), D("0")]
+TAB4 = [D("0"), D("0.4"), D("0.384"), D("0.368"), D("0.352"), D("0.336"), D("0.32"), D("0.304"), D("0.288"), D("0.272"), D("0.256"), D("0.24"), D("0.224"), D("0.208"), D("0.192"), D("0.176"), D("0.16"), D("0.152"), D("0.144"), D("0.14"), D("0.136"), D("0.132"), D("0.128"), D("0.124"), D("0.12"), D("0.116"), D("0.112"), D("0.108"), D("0.104"), D("0.1"), D("0.096"), D("0.092"), D("0.088"), D("0.084"), D("0.08"), D("0.076"), D("0.072"), D("0.068"), D("0.064"), D("0.06"), D("0.056"), D("0.052"), D("0.048"), D("0.044"), D("0.04"), D("0.036"), D("0.032"), D("0.028"), D("0.024"), D("0.02"), D("0.016"), D("0.012"), D("0.008"), D("0.004"), D("0")]
+TAB5 = [D("0"), D("1900"), D("1824"), D("1748"), D("1672"), D("1596"), D("1520"), D("1444"), D("1368"), D("1292"), D("1216"), D("1140"), D("1064"), D("988"), D("912"), D("836"), D("760"), D("722"), D("684"), D("665"), D("646"), D("627"), D("608"), D("589"), D("570"), D("551"), D("532"), D("513"), D("494"), D("475"), D("456"), D("437"), D("418"), D("399"), D("380"), D("361"), D("342"), D("323"), D("304"), D("285"), D("266"), D("247"), D("228"), D("209"), D("190"), D("171"), D("152"), D("133"), D("114"), D("95"), D("76"), D("57"), D("38"), D("19"), D("0")]
+ZAHL1 = D("1")
+ZAHL2 = D("2")
+ZAHL5 = D("5")
+ZAHL7 = D("7")
+ZAHL12 = D("12")
+ZAHL100 = D("100")
+ZAHL360 = D("360")
+ZAHL500 = D("500")
+ZAHL700 = D("700")
+ZAHL1000 = D("1000")
+ZAHL10000 = D("10000")
 
-
-def MBERECH(z: Zustand) -> None:
-    MZTABFB(z)
-    z.VFRB = stellen(((((z.ANP + (z.FVB + z.FVBZ))) * ZAHL100)), D("0"), 'ROUND_DOWN')
-    MLSTJAHR(z)
-    z.WVFRB = stellen(((((z.ZVE - z.GFB)) * ZAHL100)), D("0"), 'ROUND_DOWN')
-    if (vergleiche(z.WVFRB, D("0")) == (-D("1"))):
-        z.WVFRB = D("0")
-    z.LSTJAHR = stellen(((z.ST * D(z.f))), D("0"), 'ROUND_DOWN')
-    UPLSTLZZ(z)
-    if (vergleiche(z.ZKF, D("0")) == D("1")):
-        z.ZTABFB = (z.ZTABFB + z.KFB)
-        MRE4ABZ(z)
-        MLSTJAHR(z)
-        z.JBMG = stellen(((z.ST * D(z.f))), D("0"), 'ROUND_DOWN')
+def MPARA(z: Zustand) -> None:
+    z.BBGRVALV = D("101400")
+    z.AVSATZAN = D("0.013")
+    z.RVSATZAN = D("0.093")
+    z.BBGKVPV = D("69750")
+    z.KVSATZAN = ((((z.KVZ / ZAHL2) / ZAHL100)) + D("0.07"))
+    if (z.PVS == D("1")):
+        z.PVSATZAN = D("0.023")
     else:
-        z.JBMG = z.LSTJAHR
-    MSOLZ(z)
-
-
-def MZTABFB(z: Zustand) -> None:
-    z.ANP = D("0")
-    if ((vergleiche(z.ZVBEZ, D("0")) >= D("0")) and (vergleiche(z.ZVBEZ, z.FVBZ) == (-D("1")))):
-        z.FVBZ = D(int(z.ZVBEZ))
-    if (z.STKL < D("6")):
-        if (vergleiche(z.ZVBEZ, D("0")) == D("1")):
-            if (vergleiche(((z.ZVBEZ - z.FVBZ)), D("102")) == (-D("1"))):
-                z.ANP = stellen(((z.ZVBEZ - z.FVBZ)), D("0"), 'ROUND_UP')
-            else:
-                z.ANP = D("102")
+        z.PVSATZAN = D("0.018")
+    if (z.PVZ == D("1")):
+        z.PVSATZAN = (z.PVSATZAN + D("0.006"))
     else:
-        z.FVBZ = D("0")
-        z.FVBZSO = D("0")
-    if (z.STKL < D("6")):
-        if (vergleiche(z.ZRE4, z.ZVBEZ) == D("1")):
-            if (vergleiche((z.ZRE4 - z.ZVBEZ), D("1230")) == (-D("1"))):
-                z.ANP = stellen(((z.ANP + z.ZRE4) - z.ZVBEZ), D("0"), 'ROUND_UP')
-            else:
-                z.ANP = (z.ANP + D("1230"))
-    z.KZTAB = D("1")
-    if (z.STKL == D("1")):
-        z.SAP = D("36")
-        z.KFB = stellen(((z.ZKF * D("9756"))), D("0"), 'ROUND_DOWN')
-    else:
-        if (z.STKL == D("2")):
-            z.EFA = D("4260")
-            z.SAP = D("36")
-            z.KFB = stellen(((z.ZKF * D("9756"))), D("0"), 'ROUND_DOWN')
-        else:
-            if (z.STKL == D("3")):
-                z.KZTAB = D("2")
-                z.SAP = D("36")
-                z.KFB = stellen(((z.ZKF * D("9756"))), D("0"), 'ROUND_DOWN')
-            else:
-                if (z.STKL == D("4")):
-                    z.SAP = D("36")
-                    z.KFB = stellen(((z.ZKF * D("4878"))), D("0"), 'ROUND_DOWN')
-                else:
-                    if (z.STKL == D("5")):
-                        z.SAP = D("36")
-                        z.KFB = D("0")
-                    else:
-                        z.KFB = D("0")
-    z.ZTABFB = stellen(((((z.EFA + z.ANP) + z.SAP) + z.FVBZ)), D("2"), 'ROUND_DOWN')
-
-
-def MLSTJAHR(z: Zustand) -> None:
-    UPEVP(z)
-    z.ZVE = ((z.ZRE4 - z.ZTABFB) - z.VSP)
-    UPMLST(z)
-
-
-def UPLSTLZZ(z: Zustand) -> None:
-    z.JW = (z.LSTJAHR * ZAHL100)
-    UPANTEIL(z)
-    z.LSTLZZ = z.ANTEIL1
-
-
-def UPMLST(z: Zustand) -> None:
-    if (vergleiche(z.ZVE, ZAHL1) == (-D("1"))):
-        z.ZVE = D("0")
-        z.X = D("0")
-    else:
-        z.X = stellen(((z.ZVE / D(z.KZTAB))), D("0"), 'ROUND_DOWN')
-    if (z.STKL < D("5")):
-        UPTAB26(z)
-    else:
-        MST5_6(z)
-
-
-def UPEVP(z: Zustand) -> None:
-    if (z.KRV == D("1")):
-        z.VSPR = D("0")
-    else:
-        if (vergleiche(z.ZRE4VP, z.BBGRVALV) == D("1")):
-            z.ZRE4VPR = z.BBGRVALV
-        else:
-            z.ZRE4VPR = z.ZRE4VP
-        z.VSPR = stellen(((z.ZRE4VPR * z.RVSATZAN)), D("2"), 'ROUND_DOWN')
-    MVSPKVPV(z)
-    if (z.ALV == D("1")):
-        pass
-    else:
-        if (z.STKL == D("6")):
-            pass
-        else:
-            MVSPHB(z)
-
-
-def MVSPKVPV(z: Zustand) -> None:
-    if (vergleiche(z.ZRE4VP, z.BBGKVPV) == D("1")):
-        z.ZRE4VPR = z.BBGKVPV
-    else:
-        z.ZRE4VPR = z.ZRE4VP
-    if (z.PKV > D("0")):
-        if (z.STKL == D("6")):
-            z.VSPKVPV = D("0")
-        else:
-            z.PKPVAGZJ = stellen(((z.PKPVAGZ * ZAHL12) / ZAHL100), D("2"), 'ROUND_DOWN')
-            z.VSPKVPV = stellen(((z.PKPV * ZAHL12) / ZAHL100), D("2"), 'ROUND_DOWN')
-            z.VSPKVPV = (z.VSPKVPV - z.PKPVAGZJ)
-            if (vergleiche(z.VSPKVPV, D("0")) == (-D("1"))):
-                z.VSPKVPV = D("0")
-    else:
-        z.VSPKVPV = stellen((z.ZRE4VPR * (z.KVSATZAN + z.PVSATZAN)), D("2"), 'ROUND_DOWN')
-    z.VSP = stellen((z.VSPKVPV + z.VSPR), D("0"), 'ROUND_UP')
-
-
-def MVSPHB(z: Zustand) -> None:
-    if (vergleiche(z.ZRE4VP, z.BBGRVALV) == D("1")):
-        z.ZRE4VPR = z.BBGRVALV
-    else:
-        z.ZRE4VPR = z.ZRE4VP
-    z.VSPALV = stellen((z.AVSATZAN * z.ZRE4VPR), D("2"), 'ROUND_DOWN')
-    z.VSPHB = stellen((z.VSPALV + z.VSPKVPV), D("2"), 'ROUND_DOWN')
-    if (vergleiche(z.VSPHB, D("1900")) == D("1")):
-        z.VSPHB = D("1900")
-    z.VSPN = stellen((z.VSPR + z.VSPHB), D("0"), 'ROUND_UP')
-    if (vergleiche(z.VSPN, z.VSP) == D("1")):
-        z.VSP = z.VSPN
-
-
-def MST5_6(z: Zustand) -> None:
-    z.ZZX = z.X
-    if (vergleiche(z.ZZX, z.W2STKL5) == D("1")):
-        z.ZX = z.W2STKL5
-        UP5_6(z)
-        if (vergleiche(z.ZZX, z.W3STKL5) == D("1")):
-            z.ST = stellen(((z.ST + (((z.W3STKL5 - z.W2STKL5)) * D("0.42")))), D("0"), 'ROUND_DOWN')
-            z.ST = stellen(((z.ST + (((z.ZZX - z.W3STKL5)) * D("0.45")))), D("0"), 'ROUND_DOWN')
-        else:
-            z.ST = stellen(((z.ST + (((z.ZZX - z.W2STKL5)) * D("0.42")))), D("0"), 'ROUND_DOWN')
-    else:
-        z.ZX = z.ZZX
-        UP5_6(z)
-        if (vergleiche(z.ZZX, z.W1STKL5) == D("1")):
-            z.VERGL = z.ST
-            z.ZX = z.W1STKL5
-            UP5_6(z)
-            z.HOCH = stellen(((z.ST + (((z.ZZX - z.W1STKL5)) * D("0.42")))), D("0"), 'ROUND_DOWN')
-            if (vergleiche(z.HOCH, z.VERGL) == (-D("1"))):
-                z.ST = z.HOCH
-            else:
-                z.ST = z.VERGL
-
-
-def UP5_6(z: Zustand) -> None:
-    z.X = stellen(((z.ZX * D("1.25"))), D("0"), 'ROUND_DOWN')
-    UPTAB26(z)
-    z.ST1 = z.ST
-    z.X = stellen(((z.ZX * D("0.75"))), D("0"), 'ROUND_DOWN')
-    UPTAB26(z)
-    z.ST2 = z.ST
-    z.DIFF = (((z.ST1 - z.ST2)) * ZAHL2)
-    z.MIST = stellen(((z.ZX * D("0.14"))), D("0"), 'ROUND_DOWN')
-    if (vergleiche(z.MIST, z.DIFF) == D("1")):
-        z.ST = z.MIST
-    else:
-        z.ST = z.DIFF
-
-
-def MSOLZ(z: Zustand) -> None:
-    z.SOLZFREI = ((z.SOLZFREI * D(z.KZTAB)))
-    if (vergleiche(z.JBMG, z.SOLZFREI) == D("1")):
-        z.SOLZJ = stellen((((z.JBMG * D("5.5"))) / ZAHL100), D("2"), 'ROUND_DOWN')
-        z.SOLZMIN = stellen(((((z.JBMG - z.SOLZFREI)) * D("11.9")) / ZAHL100), D("2"), 'ROUND_DOWN')
-        if (vergleiche(z.SOLZMIN, z.SOLZJ) == (-D("1"))):
-            z.SOLZJ = z.SOLZMIN
-        z.JW = stellen((z.SOLZJ * ZAHL100), D("0"), 'ROUND_DOWN')
-        UPANTEIL(z)
-        z.SOLZLZZ = z.ANTEIL1
-    else:
-        z.SOLZLZZ = D("0")
-    if (z.R > D("0")):
-        z.JW = (z.JBMG * ZAHL100)
-        UPANTEIL(z)
-        z.BK = z.ANTEIL1
-    else:
-        z.BK = D("0")
+        z.PVSATZAN = (z.PVSATZAN - (z.PVA * D("0.0025")))
+    z.W1STKL5 = D("14071")
+    z.W2STKL5 = D("34939")
+    z.W3STKL5 = D("222260")
+    z.GFB = D("12348")
+    z.SOLZFREI = D("20350")
 
