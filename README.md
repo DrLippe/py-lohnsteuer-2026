@@ -80,3 +80,17 @@ Die Berechnungsfunktionen stammen aus der auf amtlichem BMF-XML basierenden gene
 - [BMF-Schnittstellenbeschreibung](https://www.bmf-steuerrechner.de/interface/pseudocodes.xhtml)
 
 **Teststatus:** Der Referenzwert ist als Regressionstest erfasst. Für produktiven Einsatz sollten weitere Kombinationen aller Steuerklassen, Lohnzahlungszeiträume, Versicherungskennzeichen, Freibeträge und sonstigen Bezüge mit der amtlichen BMF-Schnittstelle abgeglichen werden.
+
+
+## Excel-Zellengrenze (8.192 Zeichen)
+
+Unter [excel_cells/](excel_cells/) ist der Quellcode in **sieben aufeinanderfolgende PY-Zellen** aufgeteilt. Jede Datei enthält höchstens 5.100 Zeichen und kann einzeln in eine Python-in-Excel-Zelle kopiert werden.
+
+1. In Excel sieben PY-Zellen **untereinander** anlegen, in dieser Reihenfolge: `01.py`, `02.py`, …, `07.py`.
+2. Jeweils den Dateiinhalt vollständig (ohne Markdown-Codezäune) als Python-Code in die passende PY-Zelle kopieren.
+3. Anschließend in einer achten PY-Zelle `lohnsteuer_excel(brutto_eur=xl("B2"), steuerklasse=xl("B3"), zeitraum=2, kv_zusatzbeitrag=xl("B4"), pv_kinderlos=1)["LSTLZZ"]` ausführen.
+4. Sicherstellen, dass alle Definitionszellen vor der Ergebniszelle erfolgreich berechnet werden. Gemeinsame Python-Namen stehen in späteren Python-Zellen zur Verfügung.
+
+Die einzelnen Zellendateien sind kein importierbares Python-Modul für sich; sie müssen nacheinander ausgeführt werden. Ein Regressionstest führt alle sieben Teile hintereinander aus und vergleicht die Ergebnisse mit der ungeteilten Implementierung.
+
+**Hinweis:** Der Zeichenpuffer liegt absichtlich deutlich unter 8.192 Zeichen, damit auch eventuelle Formel-Zusatzzeichen und Maskierung nicht an die Zellengrenze stoßen.
