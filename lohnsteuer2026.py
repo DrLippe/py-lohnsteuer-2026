@@ -703,7 +703,7 @@ def lohnsteuer_excel(brutto_eur, steuerklasse=1, *,
     def cents(v):
         return int((D(str(v)) * 100).quantize(D("1"), rounding=ROUND_DOWN))
     args = dict(RE4=cents(brutto_eur), STKL=int(steuerklasse), LZZ=int(zeitraum),
-                KVZ=D(str(kv_zusatzbeitrag)), PVZ=int(pv_kinder),
+                KVZ=D(str(kv_zusatzbeitrag)), PVZ=int(pv_kinderlos),
                 PVS=int(pv_sachsen), ZKF=D(str(pv_kinder)),
                 KRV=int(rentenversicherung), PKV=int(krankenversicherung),
                 JFREIB=cents(freibetrag_jahr_eur),
